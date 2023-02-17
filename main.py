@@ -1,24 +1,21 @@
-import random
+import Day4Projects
 
-"""
-myRandInt = random.randint(0,1)
+print("*** M E N U ***")
+print("1. Who's paying for the meal?")
+print("2. Treasure Map")
+print("3. Rock, Paper, Sissors")
+print("********************************\n")
 
+validInput = [1, 2, 3]
+menuChoice = int(input("Enter the MENU choice number:"))
 
-if myRandInt == 1:
-    print("Heads")
-else:
-    print ("Tails")
-"""
+while menuChoice not in validInput:
+    print("You entered an invalid entry.")
+    menuChoice = int(input("Enter the MENU choice number:"))
 
-namesIn = input("Give me everybody's names, separated by a comma: ")
-#print(namesIn)
-
-splitNames = namesIn.split(", ")
-# print(splitNames)
-
-# print(splitNames.__len__())
-randNameIndex = random.randint(0, len(splitNames) - 1)
-print(splitNames[randNameIndex] + " will be paying for the meal.")
-
-randChoice = random.choice(splitNames)
-print("Random.choice :: " + randChoice + " will be paying for the meal.")
+if menuChoice == 1:
+    Day4Projects.whoPays()
+elif menuChoice == 2:
+    Day4Projects.treasureMap()
+elif menuChoice == 3:
+    print(f"{menuChoice}")
