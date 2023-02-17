@@ -7,23 +7,28 @@ def printMenu():
     print("0. Exit")
     print("********************************\n")
 
+printMenu()
+menuChoice = input("Enter the MENU choice number:")
 
-
-while True:
-    printMenu()
-    menuChoice = int(input("Enter the MENU choice number:"))
+while not menuChoice == "0":
 
     import Day4Projects
-    if menuChoice == 1:
+    if menuChoice == "1":
         Day4Projects.whoPays()
         break
-    elif menuChoice == 2:
+        
+    elif menuChoice == "2":
         Day4Projects.treasureMap()
         break
-    elif menuChoice == 3:
+     
+    elif menuChoice == "3":
         print(f"Menu Choice: {menuChoice}")
-    elif 0:
         break
+    
+    else:
+        print("You entered an invalid menu choice...\n")
 
-
+    printMenu()
+    menuChoice = input("Enter the MENU choice number:")
+   
 
